@@ -1,23 +1,22 @@
 import axios from 'axios';
 import env from '../config/env';
 
-let util = {
-
-};
+let util = {};
 util.title = function(title) {
-    title = title ? title + ' - Home' : 'iView project';
-    window.document.title = title;
+  title = title ? '一起发科技网--' + title : '一起发科技网-首页';
+  window.document.title = title;
 };
 
-const ajaxUrl = env === 'development' ?
-    'http://127.0.0.1:8888' :
-    env === 'production' ?
-    'https://www.url.com' :
-    'https://debug.url.com';
+const ajaxUrl =
+  env === 'development'
+    ? 'http://127.0.0.1:8888'
+    : env === 'production'
+      ? 'https://www.url.com'
+      : 'https://debug.url.com';
 
 util.ajax = axios.create({
-    baseURL: ajaxUrl,
-    timeout: 30000
+  baseURL: ajaxUrl,
+  timeout: 30000
 });
 
 export default util;

@@ -1,7 +1,8 @@
 <template>
     <header>
         <nav class="top">
-            <span class="tel pull-left">现在时间是：
+            <span class="tel pull-left">
+                <i class="el-icon-time"></i>
                 <span>{{nowDate}}</span>
             </span>
             <ul class="text-right">
@@ -29,10 +30,10 @@
             </a>
             <ul class="text-right">
                 <li>
-                    <a href="#">首页</a>
+                    <router-link to="/products">首页</router-link>
                 </li>
                 <li>
-                    <a href="#vipCenter" @click="vipCenterHandler">会员中心</a>
+                    <router-link to="/vip_center/kb_buy/tbKB">会员中心</router-link>
                 </li>
                 <li>
                     <a href="#worldKB">全国空包</a>

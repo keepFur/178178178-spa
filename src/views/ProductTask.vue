@@ -12,13 +12,13 @@
                     <em>{{tasksName[index]}}</em>任务
                     <i>
                         <el-select v-model="tasksSelected[index]" size="mini">
-                            <el-option v-for="(bb,i) in task" :label="bb.name" :value="bb.id" :key="i">
+                            <el-option v-for="(t,i) in task" :label="t.name" :value="t.id" :key="i">
                             </el-option>
                         </el-select>
                     </i>
                 </h3>
                 <div class="info">
-                    <p v-for="(vip,index) in vips" :key="index">
+                    <p v-for="(vip,j) in vips" :key="j">
                         {{vip.name}}
                         <span class="year-rate">
                             {{task[tasksSelected[index]].price[vip.priceKey]}} 元
@@ -51,7 +51,7 @@ export default {
   data: function() {
     return {
       // 会员类型
-      vips: vips,
+      vips,
       //  任务名称
       tasksName: ['宝贝', '店铺', '京东'],
       //  当前选择的任务

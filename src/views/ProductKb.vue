@@ -73,15 +73,9 @@ export default {
   data: function() {
     return {
       kbs: [tbKB, jdKB, pddKB],
-      kbSelceteds: [0, 0, 0, 0],
+      kbSelceteds: [0, 0, 0],
       vips,
       plants: ['淘宝', '京东', '拼多多'],
-      tbKBSelceted: 0,
-      jdKBSelceted: 0,
-      pddKBSelceted: 0,
-      tbKB: mockdata.kb.tbKB,
-      jdKB: mockdata.kb.jdKB,
-      pddKB: mockdata.kb.pddKB,
       ytKB: mockdata.kb.ytKB
     };
   },

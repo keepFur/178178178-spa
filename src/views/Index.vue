@@ -8,10 +8,7 @@
         <feature></feature>
         <!-- 网站公告 -->
         <notice></notice>
-        <!-- 无线流量任务 -->
-        <product-task></product-task>
-        <!--  空包 -->
-        <product-kb></product-kb>
+        <router-view></router-view>
         <!-- 底部导航 -->
         <nav-footer></nav-footer>
     </div>
