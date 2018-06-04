@@ -40,7 +40,23 @@ const routers = [
             meta: {
               title: '订单管理'
             },
-            component: resolve => require(['./views/OrderManage.vue'], resolve)
+            component: resolve =>
+              require(['./views/KbOrderManage.vue'], resolve)
+          },
+          {
+            path: 'task_buy/:pagekey',
+            meta: {
+              title: '无线流量'
+            },
+            component: resolve => require(['./views/TaskBuy.vue'], resolve)
+          },
+          {
+            path: 'order/:pagekey',
+            meta: {
+              title: '订单管理'
+            },
+            component: resolve =>
+              require(['./views/TaskOrderManage.vue'], resolve)
           }
         ]
       }

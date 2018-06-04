@@ -19,17 +19,17 @@
                 <el-menu-item index="pddKB"><router-link tag="li" to="/vip_center/kb_buy/pddKB">拼多多下单</router-link></el-menu-item>
                 <el-menu-item index="excelKB"><router-link tag="li" to="/vip_center/kb_buy/excelKB">Excel表格下单</router-link></el-menu-item>
                 <el-menu-item index="ytKB"><router-link tag="li" to="/vip_center/kb_buy/ytKB">圆通-韵达（推荐）</router-link></el-menu-item>
-                <el-menu-item index="order_manage"><router-link tag="li" to="/vip_center/order/order_manage" exact="exact">订单管理</router-link></el-menu-item>
+                <el-menu-item index="kb_order_manage"><router-link tag="li" to="/vip_center/order/kb_order_manage" exact="exact">订单管理</router-link></el-menu-item>
             </el-submenu>
             <el-submenu index="2">
                 <template slot="title">
                     <i class="el-icon-phone-outline"></i>
                     <span>无线流量专区</span>
                 </template>
-                <el-menu-item index="2-1">宝贝任务</el-menu-item>
-                <el-menu-item index="2-2">店铺任务</el-menu-item>
-                <el-menu-item index="2-3">京东任务</el-menu-item>
-                <el-menu-item index="2-4">任务记录</el-menu-item>
+                <el-menu-item index="bbTask"><router-link tag="li" to="/vip_center/task_buy/bbTask" exact="exact">宝贝任务</router-link></el-menu-item>
+                <el-menu-item index="dpTask"><router-link tag="li" to="/vip_center/task_buy/dpTask" exact="exact">店铺任务</router-link></el-menu-item>
+                <el-menu-item index="jdTask"><router-link tag="li" to="/vip_center/task_buy/jdTask" exact="exact">京东任务</router-link></el-menu-item>
+                <el-menu-item index="task_order_manage"><router-link tag="li" to="/vip_center/order/task_order_manage" exact="exact">订单管理</router-link></el-menu-item>
             </el-submenu>
             <el-submenu index="3">
                 <template slot="title">

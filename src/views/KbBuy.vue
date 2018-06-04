@@ -24,7 +24,7 @@
                 </el-form-item>
                 <el-form-item>
                     <el-button>检查格式是否正确</el-button>
-                    <el-button type="primary" @click="onSubmitHandler">立即下单</el-button>
+                    <el-button type="primary" @click="onSubmitHandler('kb-buy-form-ele')">立即下单</el-button>
                 </el-form-item>
             </el-form>
         </el-col>
@@ -130,10 +130,16 @@ export default {
     };
   },
   methods: {
-    onSubmitHandler: function() {
-      this.$message({
-        message: '购买成功',
-        type: 'success'
+    onSubmitHandler: function(formName) {
+      this.$refs[formName].validate((valid, fildes) => {
+        if (valid) {
+          this.$message({
+            message: '购买成功',
+            type: 'success'
+          });
+        } else {
+          return false;
+        }
       });
     }
   },
