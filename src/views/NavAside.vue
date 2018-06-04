@@ -36,18 +36,26 @@
                     <i class="el-icon-setting"></i>
                     <span>账号设置</span>
                 </template>
-                <el-menu-item index="3-1">修改密码</el-menu-item>
-                <el-menu-item index="3-2">会员升级</el-menu-item>
-                <el-menu-item index="3-3">修改资料</el-menu-item>
+                <el-menu-item index="update_password"><router-link tag="li" to="/vip_center/account_set/update_password" exact="exact">修改密码</router-link></el-menu-item>
+                <el-menu-item index="vip_up"><router-link tag="li" to="/vip_center/account_set/vip_up" exact="exact">会员升级</router-link></el-menu-item>
+                <el-menu-item index="update_info"><router-link tag="li" to="/vip_center/account_set/update_info" exact="exact">修改资料</router-link></el-menu-item>
             </el-submenu>
             <el-submenu index="4">
                 <template slot="title">
                     <i class="el-icon-tickets"></i>
                     <span>财务管理</span>
                 </template>
-                <el-menu-item index="4-1">在线支付</el-menu-item>
-                <el-menu-item index="4-2">资金明细</el-menu-item>
-                <el-menu-item index="4-3">提现记录</el-menu-item>
+                <el-menu-item index="inline_pay"><router-link tag="li" to="/vip_center/money_manage/inline_pay" exact="exact">在线支付</router-link></el-menu-item>
+                <el-menu-item index="money_detail"><router-link tag="li" to="/vip_center/money_manage/money_detail" exact="exact">资金明细</router-link></el-menu-item>
+                <el-menu-item index="out_recored"><router-link tag="li" to="/vip_center/money_manage/out_recored" exact="exact">提现记录</router-link></el-menu-item>
+            </el-submenu>
+            <el-submenu index="4">
+                <template slot="title">
+                    <i class="el-icon-tickets"></i>
+                    <span>其他服务</span>
+                </template>
+                <el-menu-item index="commit_order"><router-link tag="li" to="/vip_center/other_service/commit_order" exact="exact">提交工单</router-link></el-menu-item>
+                <el-menu-item index="my_order"><router-link tag="li" to="/vip_center/other_service/my_order" exact="exact">我的工单</router-link></el-menu-item>
             </el-submenu>
         </el-menu>
     </el-col>
