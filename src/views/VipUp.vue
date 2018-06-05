@@ -2,7 +2,7 @@
     <div>
         <el-col :span="17" :offset="2">
             <h3>会员升级</h3>
-            <el-form :model="upvipForm" ref="upvipFormFormEle" :rules="vipupFormRules" status-icon>
+            <el-form :model="upvipForm" ref="upvipFormEle" :rules="vipupFormRules" status-icon>
                 <el-form-item label="当前会员等级" prop="oldvip">
                     <el-input v-model="vipupForm.oldvip" auto-complete="off" readonly></el-input>
                 </el-form-item>
@@ -14,7 +14,7 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" @click="confirmVipupHandler('upvipFormFormEle')">确 定</el-button>
+                    <el-button type="primary" @click="confirmVipupHandler('upvipFormEle')">确 定</el-button>
                 </el-form-item>
             </el-form>
         </el-col>
