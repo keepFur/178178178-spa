@@ -2,7 +2,7 @@
 <template>
     <div>
         <product-task></product-task>
-        <product-kb></product-kb>
+        <!-- <product-kb></product-kb> -->
     </div>
 </template>
 <style lang="less" scoped>

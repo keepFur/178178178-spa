@@ -9,7 +9,7 @@ html {
 body {
   font-size: 1.2rem;
   line-height: 1.5;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 ::selection {
   background-color: #b3d3f4;
@@ -115,6 +115,11 @@ a:active {
 *********************************/
 header {
   width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 2px 0;
 }
 header .top {
   line-height: 3rem;
@@ -138,6 +143,8 @@ header .top ul li a {
 
 header .main {
   padding: 0;
+  width: 60%;
+  margin: auto;
 }
 header .main .brand {
   padding: 1rem 1.5rem 0;
@@ -325,9 +332,27 @@ header .main ul li a.active {
   margin: 2rem auto;
   font-size: 0;
 }
+.container .feature > h3.title {
+  font-size: 30px;
+  position: relative;
+}
+.container .feature > h3.title::before,
+.container .feature > h3.title::after {
+  content: '';
+  background: url(/src/asserts/imgs/line.png) no-repeat 0 -1px;
+  height: 1px;
+  position: absolute;
+  top: 64%;
+  width: 198px;
+  right: 29%;
+}
+.container .feature > h3.title::before {
+  background-position: 0 0;
+  left: 28%;
+}
 .feature .item {
   display: inline-block;
-  width: calc(33.33333333333% - 3rem);
+  width: calc(25% - 3.2rem);
   padding: 1rem;
   font-size: 1.4rem;
   background-color: #fff;
@@ -338,7 +363,7 @@ header .main ul li a.active {
 }
 .feature .item h3 {
   display: inline-block;
-  width: 40%;
+  width: 45%;
   margin: 0;
   padding: 0;
   vertical-align: top;
@@ -347,7 +372,7 @@ header .main ul li a.active {
 }
 .feature .item p {
   display: inline-block;
-  width: 55%;
+  width: 50%;
   margin: 0;
   padding: 0;
   color: #999;
@@ -617,13 +642,25 @@ header .main ul li a.active {
    底部导航链接
  *************************/
 .container .footer {
+  height: 155px;
   padding: 3rem 0;
-  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 900;
+  background-color: #202225;
   border-top: 2px solid #eee;
 }
-.footer .footer-content {
-  width: 90%;
-  margin: 0 auto;
+.container .footer > h3 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: normal;
+  margin: 25px 0 10px 0;
+}
+.container .footer > h3 > span {
+  color: #ff7e00;
+  display: inline-block;
+  min-width: 137px;
 }
 .footer-content p.brand {
   display: block;
@@ -682,7 +719,7 @@ header .main ul li a.active {
 footer {
   width: 100%;
   padding: 3rem 0 5rem;
-  background: #ededed;
+  background: #fff;
 }
 
 footer ul li {
