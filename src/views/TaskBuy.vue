@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <el-col :span="15">
+        <el-col :span="18">
             <el-form ref="task-buy-form-ele" :model="taskBuyForm" style="padding:24px;" :rules="taskBuyFormRules" label-position="left" size="small"
                 status-icon @submit.native.prevent>
                 <h3>「{{plantformMap[$route.params.pagekey]}}」任务下单 <i class="el-icon-question question" title="常见问题解答" @click="dialogQuestionVisible = true"></i></h3>
@@ -12,7 +12,7 @@
                         <el-option v-for="(task,index) in productTypeTask" :label="task.name" :value="task.id" :key="index"></el-option>
                     </el-select>
                 </el-form-item>
-                <el-form-item label="搜索入口">
+                <el-form-item label="搜索入口" v-show="hasIn">
                     <el-select v-model="taskBuyForm.searchIn"  style="width:100%;">
                         <el-option label="淘宝" :value="0"></el-option>
                         <el-option label="天猫" :value="1"></el-option>
@@ -46,7 +46,7 @@
                 </el-form-item>
             </el-form>
         </el-col>
-        <el-col :span="6" style="padding:24px;">
+        <el-col :span="6" style="padding:24px;padding-left:0;">
             <el-card class="box-card" shadow="hover">
                 <div slot="header" class="clearfix text-center">
                     <span style="color:#f90;">友情提示</span>
@@ -111,7 +111,6 @@
                 </div>
             </el-card>
             <div slot="footer" class="dialog-footer">
-                <el-button @click="dialogQuestionVisible=false">取 消</el-button>
                 <el-button type="primary" @click="dialogQuestionVisible=false">确 定</el-button>
             </div>
         </el-dialog>
@@ -170,7 +169,8 @@ export default {
           }
         ]
       },
-      dialogQuestionVisible: false
+      dialogQuestionVisible: false,
+      hasIn: this.$route.params.pagekey !== 'jdTask' //判断是否有入口这个选项，京东任务没有入口选项
     };
   },
   methods: {

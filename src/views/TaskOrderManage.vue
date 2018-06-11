@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-col :span="19" :offset="1" style="padding:24px;">
+        <el-col :span="24"  style="padding:24px;">
             <el-table :data="orderData" style="width: 100%">
                 <el-table-column prop="plant" label="电商平台" width="150">
                 </el-table-column>
@@ -68,26 +68,15 @@ export default {
   data: function() {
     return {
       dialogEditOrderVisible: false,
-      orderData: [
-        {
-          plant: '京东',
-          kdCompany: '圆通快递',
-          kdOrder: '123456789',
-          fromAddress: '广东省 广州市 白云区',
-          toName: '李伟',
-          toAddress: '广东省 深圳市 罗湖区',
-          orderDate: '2018-5-26'
-        },
-        {
-          plant: '淘宝',
-          kdCompany: '国通快递',
-          kdOrder: '123456789789',
-          fromAddress: '广东省 广州市 白云区',
-          toName: '李伟',
-          toAddress: '广东省 深圳市 罗湖区',
-          orderDate: '2018-4-26'
-        }
-      ],
+      orderData: Array(20).fill({
+        plant: '京东',
+        kdCompany: '圆通快递',
+        kdOrder: '123456789',
+        fromAddress: '广东省 广州市 白云区',
+        toName: '李伟',
+        toAddress: '广东省 深圳市 罗湖区',
+        orderDate: '2018-5-26'
+      }),
       fromAddressInfo: [],
       editOrderForm: {
         fromName: '',

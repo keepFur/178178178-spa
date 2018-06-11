@@ -16,7 +16,7 @@
                     <a href="#" @click.prevent="dialogHelpVisible=true">客服</a>
                 </li>
                 <li>
-                    <router-link to="/vip_center/kb_buy/tbKB">控制台</router-link>
+                    <router-link to="/admin/task_buy/bbTask">控制台</router-link>
                 </li>
                 <li>
                     <el-button type="primary" @click.native="dialogLoginVisible=true">登录</el-button>
