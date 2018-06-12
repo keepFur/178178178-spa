@@ -8,6 +8,7 @@ const path = require('path');
 const util = require('./src/server/lib/util');
 const User = require('./src/server/lib/user');
 let app = express();
+let apiRoutes = app.Router();
 // 使用中间件
 app.use(
   session({
@@ -27,20 +28,15 @@ app.use(
     limit: '15mb'
   })
 );
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.set('src', path.join('src'));
-app.set('views', path.join(__dirname, '/'));
 // 业务逻辑处理
 const user = new User();
 
-// 首页
-app.get('/', function(req, res) {
-  res.render('index.html');
-});
-
 // 用户注册
-app.get('/create_user', function(req, res) {
+apiRoutes.get('/create_user', function(req, res) {
   try {
     user.createUser(req, res, req.body);
   } catch (error) {
@@ -50,5 +46,5 @@ app.get('/create_user', function(req, res) {
 
 // 启动服务
 app.listen(8090, function() {
-  util.logger('已成功启动服务「8080」。。。');
+  util.logger('已成功启动服务「8090」。。。');
 });
